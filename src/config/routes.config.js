@@ -1,8 +1,8 @@
-import Home from "../containers/home";
+import Home from '../containers/home';
 
 export default {
   HOME: {
     url: '/',
     container: Home,
-  }
-}
+  },
+};

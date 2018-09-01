@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   updateResponsiveBreakpoint: ({ breakpoint }) =>
-    dispatch(updateResponsiveBreakpoint({ breakpoint }))
+    dispatch(updateResponsiveBreakpoint({ breakpoint })),
 });
 
 export default connect(
