@@ -1,11 +1,9 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-
-
-const rootReducer = combineReducers({});
+import AppReducer from '../containers/reducer';
 
 const store = createStore(
-  rootReducer,
+  AppReducer,
   applyMiddleware(thunk),
 );
 
