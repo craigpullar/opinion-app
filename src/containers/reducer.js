@@ -4,6 +4,7 @@ import { UPDATE_RESPONSIVE_BREAKPOINT } from './action-types';
 const ReducerMap = {
   DEFAULT: {
     ...combineReducers({}),
+    currentBreakpoint: "",
   },
   [UPDATE_RESPONSIVE_BREAKPOINT]: ({ previousState, payload }) => ({
     ...previousState,

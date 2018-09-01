@@ -6,6 +6,7 @@ import App from './containers';
 import './index.css';
 import { initFirebase, ReduxAppStore } from './config';
 import registerServiceWorker from './registerServiceWorker';
+import { getCurrentBreakpoint } from './containers/utilities';
 
 initFirebase();
 
@@ -13,11 +14,9 @@ console.log(ReduxAppStore.getState());
 
 const AppRender = () => (
     <BrowserRouter>
-  <Provider store={ReduxAppStore}>
-
-      <App />
-  </Provider>
-
+      <Provider store={ReduxAppStore}>
+          <App initialBreakpoint={getCurrentBreakpoint({ screenWidth: window.innerWidth })}/>
+      </Provider>
     </BrowserRouter>
 );
 
