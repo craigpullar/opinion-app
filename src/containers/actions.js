@@ -4,3 +4,5 @@ export const updateResponsiveBreakpoint = ({ breakpoint }) => ({
   type: UPDATE_RESPONSIVE_BREAKPOINT,
   payload: breakpoint,
 });
+
+export default updateResponsiveBreakpoint;
