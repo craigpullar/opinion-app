@@ -2,6 +2,7 @@ import {
   createStore, applyMiddleware, combineReducers, compose,
 } from 'redux';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 import AppReducer from '../containers/reducer';
 import SignUpReducer from '../containers/sign-up/reducer';
 import LoginReducer from '../containers/login/reducer';
@@ -20,7 +21,7 @@ const store = createStore(
     signUp: SignUpReducer,
     login: LoginReducer,
   }),
-  composeEnhancers(applyMiddleware(thunk)),
+  composeEnhancers(applyMiddleware(thunk), applyMiddleware(logger)),
 );
 
 export default store;

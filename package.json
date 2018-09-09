@@ -34,5 +34,8 @@
   "pre-commit": [
     "lint"
   ],
-  "pre-push": []
+  "pre-push": [],
+  "devDependencies": {
+    "redux-logger": "^3.0.6"
+  }
 }
