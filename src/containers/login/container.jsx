@@ -4,7 +4,7 @@ import { TextField, Button, Card } from '@material-ui/core';
 
 class Login extends Component {
   static propTypes = {
-    classes: PropTypes.objectOf(PropTypes.object).isRequired,
+    classes: PropTypes.objectOf(PropTypes.string).isRequired,
     loginUser: PropTypes.func.isRequired,
   };
 
@@ -34,8 +34,8 @@ class Login extends Component {
         <Card className={this.props.classes.form}>
           <form noValidate autoComplete="off">
             <TextField
-              id='email'
-              placeholder='Email'
+              id="email"
+              placeholder="Email"
               margin="dense"
               className={this.props.classes.input}
               value={this.state.email}
@@ -43,17 +43,17 @@ class Login extends Component {
               fullWidth
             />
             <TextField
-              id='password'
-              placeholder='Password'
+              id="password"
+              placeholder="Password"
               className={this.props.classes.input}
               value={this.state.password}
-              type='password'
+              type="password"
               onChange={this.onInputChange}
               fullWidth
             />
             <Button
-              variant='outline'
-              color='primary'
+              variant="outlined"
+              color="primary"
               onClick={this.handleLogin}
             >
               Login

@@ -4,8 +4,8 @@ import Card from '@material-ui/core/Card';
 import { TextField, Button } from '@material-ui/core';
 
 class SignUp extends Component {
-  propTypes = {
-    classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  static propTypes = {
+    classes: PropTypes.objectOf(PropTypes.string).isRequired,
     signUpUser: PropTypes.func.isRequired,
   };
 
@@ -23,23 +23,22 @@ class SignUp extends Component {
   }
 
   handleSignUp = () => {
-    console.log(this.state);
     this.props.signUpUser({
       username: this.state.username,
       email: this.state.email,
-      password: this.state.password
-    }).then(() => { console.log("success") });
+      password: this.state.password,
+    }).then(() => { console.log('success'); });
   }
 
   render() {
     return (
       <main>
         <h1>Sign up</h1>
-        <Card className={this.props.classes.form} >
+        <Card className={this.props.classes.form}>
           <form noValidate autoComplete="off">
             <TextField
-              id='username'
-              placeholder='Username'
+              id="username"
+              placeholder="Username"
               margin="dense"
               className={this.props.classes.input}
               value={this.state.username}
@@ -58,17 +57,17 @@ class SignUp extends Component {
               fullWidth
             />
             <TextField
-              id='password'
-              placeholder='Password'
+              id="password"
+              placeholder="Password"
               className={this.props.classes.input}
               value={this.state.password}
-              type='password'
+              type="password"
               onChange={this.onInputChange}
               fullWidth
             />
             <Button
-              variant='outline'
-              color='primary'
+              variant="outlined"
+              color="primary"
               onClick={this.handleSignUp}
             >
               Sign up
@@ -76,7 +75,7 @@ class SignUp extends Component {
           </form>
         </Card>
       </main>
-    )
+    );
   }
 }
 

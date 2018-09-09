@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import debounce from 'debounce';
-import { Routes } from "../config";
-import { getCurrentBreakpoint, renderRoute } from './utilities.jsx';
-import { Breakpoints } from "../config";
+import { Routes } from '../config';
+import { getCurrentBreakpoint, renderRoute } from './utilities';
 import './App.css';
 
 class App extends Component {
-
   static propTypes = {
-    updateResponsiveBreakpoint: PropTypes.func.isRequired
+    updateResponsiveBreakpoint: PropTypes.func.isRequired,
   };
 
   onResize = this.onResize.bind(this);
@@ -21,10 +19,9 @@ class App extends Component {
 
   onResize() {
     this.props.updateResponsiveBreakpoint({
-      breakpoint: getCurrentBreakpoint({ screenWidth: window.innerWidth })
+      breakpoint: getCurrentBreakpoint({ screenWidth: window.innerWidth }),
     });
   }
-
 
 
   render() {

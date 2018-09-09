@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import { auth } from 'firebase';
 
 export const loginUser = ({ email, password }) =>
-  firebase.auth().signInWithEmailAndPassword(email, password);
+  auth().signInWithEmailAndPassword(email, password);
