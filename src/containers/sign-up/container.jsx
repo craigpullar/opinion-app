@@ -4,7 +4,6 @@ import Card from '@material-ui/core/Card';
 import { TextField, Button } from '@material-ui/core';
 
 class SignUp extends Component {
-
   propTypes = {
     classes: PropTypes.objectOf(PropTypes.object).isRequired,
     signUpUser: PropTypes.func.isRequired,

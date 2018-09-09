@@ -11,6 +11,7 @@
     "no-confusing-arrow": "off",
     "implicit-arrow-linebreak": "off",
     "react/jsx-filename-extension": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/destructuring-assignment": "off"
   }
 }
