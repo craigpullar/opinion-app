@@ -5,6 +5,7 @@ import { Card, TextField, Button } from '@material-ui/core';
 class CreateQuestion extends Component {
   static propTypes = {
     classes: PropTypes.objectOf(PropTypes.string).isRequired,
+    createQuestion: PropTypes.func.isRequired,
   };
 
   state = {
@@ -18,8 +19,11 @@ class CreateQuestion extends Component {
     });
   };
 
-  handleQuestion = () => {
-
+  handleSubmit = () => {
+    this.props.createQuestion({
+      question: this.state.question,
+      userId: 'hFGuWP9jRBQBorJocsBMy2rsUrv2',
+    });
   }
 
   render() {
@@ -33,7 +37,6 @@ class CreateQuestion extends Component {
               placeholder="Question"
               className={this.props.classes.input}
               value={this.state.question}
-              type="password"
               onChange={this.onInputChange}
               fullWidth
             />

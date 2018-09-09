@@ -6,6 +6,7 @@ import logger from 'redux-logger';
 import AppReducer from '../containers/reducer';
 import SignUpReducer from '../containers/sign-up/reducer';
 import LoginReducer from '../containers/login/reducer';
+import CreateQuestionReducer from '../containers/create-question/reducer';
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = typeof window === 'object'
@@ -20,6 +21,7 @@ const store = createStore(
     app: AppReducer,
     signUp: SignUpReducer,
     login: LoginReducer,
+    createQuestion: CreateQuestionReducer,
   }),
   composeEnhancers(applyMiddleware(thunk), applyMiddleware(logger)),
 );
