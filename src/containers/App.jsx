@@ -28,7 +28,6 @@ class App extends Component {
 
 
   render() {
-    console.log(this.props.currentBreakpoint);
     return (
       <div className="App">
         <header className="App-header">

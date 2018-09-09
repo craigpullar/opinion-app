@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import { Breakpoints } from "../config";
+import { Breakpoints } from '../config';
 
 export const getCurrentBreakpoint = ({ screenWidth }) => {
   const breakpointKey = Object.entries(Breakpoints.checkFunctions)
@@ -9,4 +9,4 @@ export const getCurrentBreakpoint = ({ screenWidth }) => {
 };
 
 export const renderRoute = ({ url, container: Container }) =>
-  <Route key={url} path={url} render={() => <Container />} />;
+  <Route key={url} path={url} render={() => <Container />} exact />;
