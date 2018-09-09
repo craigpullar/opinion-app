@@ -9,8 +9,7 @@ import './App.css';
 class App extends Component {
 
   static propTypes = {
-    updateResponsiveBreakpoint: PropTypes.func.isRequired,
-    initialBreakpoint: PropTypes.string.isRequired,
+    updateResponsiveBreakpoint: PropTypes.func.isRequired
   };
 
   onResize = this.onResize.bind(this);

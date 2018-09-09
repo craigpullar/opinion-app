@@ -33,7 +33,5 @@
   "pre-commit": [
     "lint"
   ],
-  "pre-push": [
-    "test"
-  ]
+  "pre-push": []
 }
